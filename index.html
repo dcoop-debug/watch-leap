@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Watch Leap — 動画視聴履歴を完全自動・ローカル管理。サーバー送信ゼロ。Safari拡張機能。">
+<meta property="og:title" content="Watch Leap">
+<meta property="og:description" content="動画視聴履歴を完全自動・ローカル管理。サーバー送信ゼロ。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#fafaf8">
+<title>Watch Leap — プライベート動画ライブラリ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── Nav ── -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="logo-box">
+      <svg viewBox="0 0 16 16" fill="none">
+        <rect x="1" y="2" width="14" height="10" rx="2" stroke="white" stroke-width="1.4"/>
+        <path d="M6 5.5L10.5 8L6 10.5V5.5Z" fill="white"/>
+        <path d="M4 14H12" stroke="white" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+    </div>
+    Watch Leap
+  </a>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('ja')">JA</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+    <!-- TODO: Replace href with actual App Store URL after approval -->
+    <a href="#" class="btn-store">
+      <svg viewBox="0 0 14 14" fill="none">
+        <path d="M10.5 2.5H3.5A1 1 0 0 0 2.5 3.5v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1z" stroke="white" stroke-width="1.2"/>
+        <path d="M5 7l1.5 1.5L9 5" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="ja">App Store</span>
+      <span class="en">App Store</span>
+    </a>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero">
+  <div class="hero-inner">
+
+    <!-- left: text -->
+    <div class="hero-text">
+      <p class="hero-eyebrow">
+        <span class="eyebrow-pip"></span>
+        <span class="ja">Safari拡張機能 + iOS アプリ</span>
+        <span class="en">Safari Extension + iOS App</span>
+      </p>
+
+      <h1 class="ja">動画視聴履歴を、<br><span class="accent-word">もっとスマートに。</span></h1>
+      <h1 class="en">Your video history,<br><span class="accent-word">on autopilot.</span></h1>
+
+      <p class="hero-desc ja">再生するだけで自動記録。ボタン操作不要、サーバー送信ゼロ。YouTube・Twitchをはじめ、あらゆる動画サイトに対応します。</p>
+      <p class="hero-desc en">Just play and it's recorded. No buttons, no servers. Works on YouTube, Twitch, and virtually every video site.</p>
+
+      <div class="hero-cta">
+        <!-- TODO: Replace href with actual App Store URL after approval -->
+        <a href="#" class="btn-primary">
+          <svg viewBox="0 0 17 17" fill="none">
+            <rect x="1" y="2" width="15" height="11" rx="2.5" stroke="white" stroke-width="1.5"/>
+            <path d="M6.5 5.5L11 8.5L6.5 11.5V5.5Z" fill="white"/>
+          </svg>
+          <span class="ja">App Storeで無料入手</span>
+          <span class="en">Get it Free on App Store</span>
+        </a>
+        <a href="support.html" class="btn-outline">
+          <span class="ja">使い方を見る</span>
+          <span class="en">How it works</span>
+        </a>
+      </div>
+
+      <div class="trust">
+        <span class="trust-item">
+          <span class="ja">100%ローカル保存</span>
+          <span class="en">100% Local Storage</span>
+        </span>
+        <span class="trust-sep"></span>
+        <span class="trust-item">
+          <span class="ja">サーバー送信ゼロ</span>
+          <span class="en">Zero Data Sent</span>
+        </span>
+        <span class="trust-sep"></span>
+        <span class="trust-item">
+          <span class="ja">無料で始める</span>
+          <span class="en">Free to Start</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- right: app mockup -->
+    <div class="hero-visual">
+      <div class="app-mockup">
+
+        <!-- header -->
+        <div class="am-head">
+          <div class="am-head-left">
+            <div class="am-logo-box">
+              <svg viewBox="0 0 16 16" fill="none">
+                <rect x="1" y="2" width="14" height="10" rx="2" stroke="white" stroke-width="1.4"/>
+                <path d="M6 5.5L10.5 8L6 10.5V5.5Z" fill="white"/>
+              </svg>
+            </div>
+            <span class="am-app-name">Watch Leap</span>
+          </div>
+          <div class="am-head-right">
+            <svg class="am-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <circle cx="7" cy="7" r="4"/><path d="M11 11l2.5 2.5"/>
+            </svg>
+            <svg class="am-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 4h12M2 8h12M2 12h7"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- tab bar -->
+        <div class="am-tabs">
+          <span class="am-tab am-on ja">視聴中</span>
+          <span class="am-tab am-on en">History</span>
+          <span class="am-tab ja">★ お気に入り</span>
+          <span class="am-tab en">★ Faves</span>
+          <span class="am-tab ja">シャッフル</span>
+          <span class="am-tab en">Shuffle</span>
+          <span class="am-tab ja">ランキング</span>
+          <span class="am-tab en">Ranks</span>
+        </div>
+
+        <!-- today -->
+        <div class="am-group"><span class="ja">今日</span><span class="en">Today</span></div>
+
+        <div class="am-item">
+          <div class="am-thumb"></div>
+          <div class="am-info">
+            <div class="am-title">
+              <i class="am-star">★</i>
+              <span class="ja">睡眠の質を上げる習慣</span>
+              <span class="en">Habits for Better Sleep</span>
+            </div>
+            <div class="am-progress"><div class="am-fill" style="width:83%"></div></div>
+            <div class="am-meta"><span>83%</span><span>·</span><span>youtube.com</span></div>
+          </div>
+        </div>
+
+        <div class="am-item">
+          <div class="am-thumb am-thumb-b"></div>
+          <div class="am-info">
+            <div class="am-title">
+              <span class="ja">Blender入門チュートリアル</span>
+              <span class="en">Blender Beginner Tutorial</span>
+            </div>
+            <div class="am-progress"><div class="am-fill" style="width:35%"></div></div>
+            <div class="am-meta"><span>35%</span><span>·</span><span>twitch.tv</span></div>
+          </div>
+        </div>
+
+        <!-- yesterday -->
+        <div class="am-group"><span class="ja">昨日</span><span class="en">Yesterday</span></div>
+
+        <div class="am-item">
+          <div class="am-thumb am-thumb-c"></div>
+          <div class="am-info">
+            <div class="am-title">
+              <i class="am-star">★</i>
+              <span class="ja">夏のキャンプ vlog 2024</span>
+              <span class="en">Summer Camp Vlog 2024</span>
+            </div>
+            <div class="am-progress"><div class="am-fill am-done" style="width:100%"></div></div>
+            <div class="am-meta">
+              <span class="ja">視聴済み</span><span class="en">Completed</span>
+              <span>·</span><span>youtube.com</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="am-item">
+          <div class="am-thumb am-thumb-d"></div>
+          <div class="am-info">
+            <div class="am-title">
+              <span class="ja">プログラミング講座 #12</span>
+              <span class="en">Coding Course #12</span>
+            </div>
+            <div class="am-progress"><div class="am-fill" style="width:61%"></div></div>
+            <div class="am-meta"><span>61%</span><span>·</span><span>vimeo.com</span></div>
+          </div>
+        </div>
+
+        <!-- status bar -->
+        <div class="am-status">
+          <div class="am-recording">
+            <span class="am-rdot"></span>
+            <span class="ja">youtube.com 記録中</span>
+            <span class="en">Recording youtube.com</span>
+          </div>
+          <span class="am-count ja">128本</span>
+          <span class="am-count en">128 videos</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Features ── -->
+<section class="features">
+  <div class="container">
+    <div class="section-head">
+      <p class="section-kicker">
+        <span class="ja">特徴</span><span class="en">Features</span>
+      </p>
+      <h2 class="section-title ja">ただ動画を見るだけ。<br>記録はすべて自動。</h2>
+      <h2 class="section-title en">Just watch.<br>Everything else is automatic.</h2>
+      <p class="section-lead ja">面倒な操作は一切不要。Watch Leapがバックグラウンドで視聴履歴を静かに管理します。</p>
+      <p class="section-lead en">No bookmarking, no manual logging. Watch Leap handles everything silently in the background.</p>
+    </div>
+
+    <div class="feat-grid">
+
+      <div class="feat">
+        <h3 class="ja">自動記録</h3>
+        <h3 class="en">Auto-Record</h3>
+        <p class="ja">指定秒数以上再生すると自動記録。ザッピングは除外され、ボタン操作は一切不要。</p>
+        <p class="en">Videos are recorded after the set duration. Zapping is filtered out automatically. Zero manual input.</p>
+      </div>
+
+      <div class="feat">
+        <h3 class="ja">完全ローカル保存</h3>
+        <h3 class="en">100% Private</h3>
+        <p class="ja">すべてのデータは端末内にのみ保存。外部サーバーへの送信・クラウド同期は一切ありません。</p>
+        <p class="en">All data is stored only on your device. Nothing is ever sent to external servers or synced to the cloud.</p>
+      </div>
+
+      <div class="feat">
+        <h3 class="ja">クロスサイト対応</h3>
+        <h3 class="en">Works Everywhere</h3>
+        <p class="ja">YouTube・Twitchをはじめ、iframeや動的SPAサイト、CDNプレーヤーにも自動対応。</p>
+        <p class="en">YouTube, Twitch, embedded players, single-page apps — if it plays video, Watch Leap tracks it.</p>
+      </div>
+
+      <div class="feat">
+        <h3 class="ja">スマートライブラリ</h3>
+        <h3 class="en">Smart Library</h3>
+        <p class="ja">視聴中・完了・お気に入りで自動整理。タイトル・メモで検索、タグ付けも可能。</p>
+        <p class="en">Auto-organized by status. Search by title or note, add tags and favorites at any time.</p>
+      </div>
+
+      <div class="feat">
+        <h3 class="ja">統計ダッシュボード</h3>
+        <h3 class="en">Statistics Dashboard</h3>
+        <p class="ja">曜日・時間帯別の視聴パターン、サイト別集計、ランキングを一画面で確認。視聴習慣を可視化します。</p>
+        <p class="en">View viewing patterns by day and hour, per-site totals, and rankings — all in one screen.</p>
+      </div>
+
+      <div class="feat">
+        <h3 class="ja">スマートシャッフル</h3>
+        <h3 class="en">Smart Shuffle</h3>
+        <p class="ja">視聴回数・経過日数・お気に入りを考慮した重み付きシャッフル。UR / SSR など見た頻度でレアリティバッジも付与。</p>
+        <p class="en">Weighted shuffle based on watch count, recency, and favorites. Videos earn rarity badges (UR / SSR) the more you love them.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Pricing ── -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <p class="section-kicker">
+        <span class="ja">プラン</span><span class="en">Plans</span>
+      </p>
+      <h2 class="section-title ja">無料で始めて、<br>Proで解放する。</h2>
+      <h2 class="section-title en">Start free,<br>unlock with Pro.</h2>
+      <p class="section-lead ja">基本的な視聴履歴管理は無料。Proプランで統計・シャッフル・無制限機能がすべて使えます。</p>
+      <p class="section-lead en">Core watch history is always free. Upgrade to Pro for stats, shuffle, and unlimited everything.</p>
+    </div>
+
+    <div class="plan-grid">
+
+      <div class="plan">
+        <p class="plan-tier ja">無料</p>
+        <p class="plan-tier en">Free</p>
+        <div class="plan-price-row">
+          <span class="plan-price-num ja">¥0</span>
+          <span class="plan-price-num en">Free</span>
+        </div>
+        <ul class="plan-features">
+          <li><span class="ja">視聴履歴の自動記録（全サイト対応）</span><span class="en">Automatic recording on any site</span></li>
+          <li><span class="ja">直近1週間の履歴表示</span><span class="en">1-week history display</span></li>
+          <li><span class="ja">お気に入り各10件まで（通常 / プライベート）</span><span class="en">Up to 10 favorites per browsing mode</span></li>
+          <li><span class="ja">スマートシャッフル + レアリティバッジ</span><span class="en">Smart shuffle + rarity badges</span></li>
+          <li><span class="ja">統計ダッシュボード</span><span class="en">Statistics dashboard</span></li>
+          <li><span class="ja">エクスポート（CSV / JSON）</span><span class="en">Export (CSV / JSON)</span></li>
+          <li><span class="ja">100%ローカル保存・サーバー送信ゼロ</span><span class="en">100% local — no servers</span></li>
+        </ul>
+        <!-- TODO: Replace href with actual App Store URL after approval -->
+        <a href="#" class="plan-cta plan-cta-free">
+          <span class="ja">App Storeで無料入手</span>
+          <span class="en">Get Free on App Store</span>
+        </a>
+      </div>
+
+      <div class="plan plan-pro">
+        <span class="plan-badge">PRO</span>
+        <p class="plan-tier">Pro</p>
+        <div class="plan-price-row">
+          <span class="plan-price-num ja">¥480</span>
+          <span class="plan-price-num en">$2.99</span>
+          <span class="plan-price-unit ja"> / 月</span>
+          <span class="plan-price-unit en"> / mo</span>
+        </div>
+        <ul class="plan-features">
+          <li><span class="ja">全期間の視聴履歴表示（無料は1週間）</span><span class="en">Full history display (free: 1 week)</span></li>
+          <li><span class="ja">お気に入り無制限（無料は各10件）</span><span class="en">Unlimited favorites (free: 10 per mode)</span></li>
+          <li><span class="ja">無料プランの全機能を含む</span><span class="en">All free features included</span></li>
+        </ul>
+        <p class="plan-upgrade-note ja">アップグレードはアプリ内から</p>
+        <p class="plan-upgrade-note en">Upgrade from within the app</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── How-to ── -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <p class="section-kicker">
+        <span class="ja">使い方</span><span class="en">How to Use</span>
+      </p>
+      <h2 class="section-title ja">3ステップで始める</h2>
+      <h2 class="section-title en">3 steps to get started</h2>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-aside">
+          <div class="step-num">1</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-body">
+          <h3 class="ja">Safari拡張機能を有効にする</h3>
+          <h3 class="en">Enable the Safari Extension</h3>
+          <p class="ja">「設定」アプリ → Safari → 拡張機能 → Watch Leap をオンにします。</p>
+          <p class="en">Settings → Safari → Extensions → toggle on Watch Leap.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-aside">
+          <div class="step-num">2</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-body">
+          <h3 class="ja">動画サイトで許可する</h3>
+          <h3 class="en">Allow on Video Sites</h3>
+          <p class="ja">動画サイトを開き、ツールバーの Watch Leap アイコンをタップ。ポップアップに表示される「<strong>〇〇.com を記録する</strong>」ボタンをタップすると許可ダイアログが表示されます。「<strong>このWebサイトで常に許可</strong>」を選択してください。</p>
+          <p class="en">Open a video site and tap the Watch Leap icon in the toolbar. In the popup, tap "<strong>Record on 〇〇.com</strong>". When the permission dialog appears, choose "<strong>Always Allow on This Website</strong>".</p>
+          <span class="note ja">複数サイトをまとめて登録したい場合は: 設定 → Safari → 拡張機能 → Watch Leap → 一番下で「すべてのWebサイトを許可」</span>
+          <span class="note en">To allow all sites at once: Settings → Safari → Extensions → Watch Leap → "Allow on All Websites" at the bottom.</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-aside">
+          <div class="step-num">3</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-body">
+          <h3 class="ja">普段どおり動画を楽しむ</h3>
+          <h3 class="en">Watch as usual</h3>
+          <p class="ja">あとは動画を再生するだけ。視聴履歴は自動でライブラリに追加されます。</p>
+          <p class="en">That's it. Play any video and it appears in your library automatically.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="faq">
+  <div class="container">
+    <div class="section-head">
+      <p class="section-kicker">FAQ</p>
+      <h2 class="section-title ja">よくある質問</h2>
+      <h2 class="section-title en">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary>
+          <span class="ja">データはどこに保存されますか？</span>
+          <span class="en">Where is my data stored?</span>
+          <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <p class="faq-a ja">すべてのデータはお使いの端末内（Safariのローカルストレージ）にのみ保存されます。外部サーバーへの送信、クラウド同期、トラッキングは一切行いません。</p>
+        <p class="faq-a en">All data is stored locally on your device in Safari's local storage. Nothing is sent to external servers, synced to the cloud, or used for tracking of any kind.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="ja">どのサイトに対応していますか？</span>
+          <span class="en">Which sites are supported?</span>
+          <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <p class="faq-a ja">YouTube・Twitchをはじめ、HTML5の &lt;video&gt; 要素を使用するあらゆるサイトに対応しています。iframe埋め込みやSPA（シングルページアプリ）にも自動で対応します。</p>
+        <p class="faq-a en">YouTube, Twitch, and any site using HTML5 &lt;video&gt; elements. This includes embedded players and single-page apps with automatic navigation detection.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="ja">動画が記録されないのですが？</span>
+          <span class="en">Videos aren't being recorded. What should I do?</span>
+          <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <p class="faq-a ja">ツールバーのWatch Leapアイコンをタップし、そのサイトの許可状態を確認してください。「〇〇.com を記録する」ボタンが表示されている場合は、まだ許可されていません。ボタンをタップして「常に許可」を選択してください。詳しいトラブルシューティングは<a href="support.html">サポートページ</a>をご覧ください。</p>
+        <p class="faq-a en">Tap the Watch Leap toolbar icon and check the site's permission status. If you see a "Record on 〇〇.com" button, that site hasn't been allowed yet — tap it and choose "Always Allow". For detailed troubleshooting, visit the <a href="support.html">support page</a>.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="ja">データを削除するには？</span>
+          <span class="en">How do I delete my data?</span>
+          <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <p class="faq-a ja">ライブラリから個別に削除するか、設定 → データ管理 → 「すべて削除」から全件削除できます。iOSアプリの設定画面からも同様の操作が可能です。</p>
+        <p class="faq-a en">Delete individual videos from the library, or go to Settings → Data Management → "Clear all data". You can also manage your data from the iOS app's settings screen.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="ja">無料プランの制限は何ですか？</span>
+          <span class="en">What are the limits of the free plan?</span>
+          <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <p class="faq-a ja">無料プランでは直近1週間分の視聴履歴が表示されます。お気に入りは通常ブラウズ・プライベートブラウズそれぞれ10件まで登録できます。シャッフル・統計・エクスポートなどその他の機能はすべて無料で利用可能です。Proにアップグレードすると全期間の履歴表示とお気に入り無制限が解放されます。</p>
+        <p class="faq-a en">The free plan shows the last 1 week of history. You can save up to 10 favorites per browsing mode (regular and private). Shuffle, statistics, export, and all other features are fully available for free. Upgrading to Pro unlocks full history and unlimited favorites.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="ja">Proプランで何が変わりますか？</span>
+          <span class="en">What does Pro unlock?</span>
+          <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <p class="faq-a ja">Proプランで変わるのは2点です。①視聴履歴の表示期間が全期間に解放されます（無料は直近1週間）。②お気に入り登録数が無制限になります（無料は各ブラウズモード10件）。シャッフルや統計などその他の機能は無料から変わりません。アップグレードはアプリ内のApple決済から行えます（<span class="ja-price">¥480/月</span>）。いつでもキャンセル可能です。</p>
+        <p class="faq-a en">Pro unlocks two things: ① Full viewing history — no 1-week limit. ② Unlimited favorites — no 10-per-mode cap. Shuffle, stats, export, and everything else stay exactly the same. You can upgrade from within the app (<span class="en-price">$2.99/mo</span>). Cancel anytime.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <div class="logo-box">
+        <svg viewBox="0 0 16 16" fill="none">
+          <rect x="1" y="2" width="14" height="10" rx="2" stroke="white" stroke-width="1.4"/>
+          <path d="M6 5.5L10.5 8L6 10.5V5.5Z" fill="white"/>
+          <path d="M4 14H12" stroke="white" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </div>
+      Watch Leap
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html" class="ja">プライバシーポリシー</a>
+      <a href="privacy.html" class="en">Privacy Policy</a>
+      <a href="support.html" class="ja">サポート</a>
+      <a href="support.html" class="en">Support</a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2025 Watch Leap. All rights reserved.</p>
+</footer>
+
+<script src="lang.js"></script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Watch Leap サポート — 使い方・よくある質問">
+<meta name="theme-color" content="#fafaf8">
+<title>サポート — Watch Leap</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="logo-box">
+      <svg viewBox="0 0 16 16" fill="none">
+        <rect x="1" y="2" width="14" height="10" rx="2" stroke="white" stroke-width="1.4"/>
+        <path d="M6 5.5L10.5 8L6 10.5V5.5Z" fill="white"/>
+        <path d="M4 14H12" stroke="white" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+    </div>
+    Watch Leap
+  </a>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('ja')">JA</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <h1 class="ja">サポート</h1>
+    <h1 class="en">Support</h1>
+    <p class="meta ja">使い方・よくある質問・お問い合わせ</p>
+    <p class="meta en">Setup guide, FAQ, and contact</p>
+  </div>
+</header>
+
+<!-- ── Japanese ── -->
+<div class="prose ja">
+
+  <h2>初期設定ガイド</h2>
+  <p>Watch Leap を使い始めるには、以下の手順で拡張機能を有効にしてください。</p>
+
+  <div class="support-steps">
+    <div class="s-step">
+      <div class="s-num">1</div>
+      <div>
+        <h3>Safari拡張機能を有効にする</h3>
+        <p>iPhoneの「設定」アプリを開き、「Safari」→「拡張機能」→「Watch Leap」をタップしてオンにします。</p>
+      </div>
+    </div>
+
+    <div class="s-step">
+      <div class="s-num">2</div>
+      <div>
+        <h3>動画サイトで許可する（最重要）</h3>
+        <p>記録したい動画サイト（例: YouTube）を Safari で開きます。ツールバーの <strong>Watch Leap アイコン</strong>をタップするとポップアップが表示され、「<strong>youtube.com を記録する</strong>」のようなボタンが現れます。タップするとSafariの許可ダイアログが表示されるので「<strong>このWebサイトで常に許可</strong>」を選択してください。</p>
+        <span class="note">ダイアログが表示されない場合: アドレスバーの「ぁあ」→ Watch Leap →「このWebサイトで常に許可」から手動で設定できます。</span>
+      </div>
+    </div>
+
+    <div class="s-step">
+      <div class="s-num">3</div>
+      <div>
+        <h3>動画を再生する</h3>
+        <p>あとは動画を普段どおり再生するだけです。デフォルトでは10秒以上再生すると自動で記録されます。</p>
+      </div>
+    </div>
+
+    <div class="s-step">
+      <div class="s-num">4</div>
+      <div>
+        <h3>ライブラリを確認する</h3>
+        <p>ツールバーの Watch Leap アイコンをタップし、「ライブラリを開く」を選択すると視聴履歴を確認できます。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 8v4M12 16h.01"/>
+    </svg>
+    <p>複数のサイトをまとめて許可する場合: 「設定」→「Safari」→「拡張機能」→「Watch Leap」→ 一番下の「すべてのWebサイトを許可」を選択。サイトごとの登録が不要になります。</p>
+  </div>
+
+  <hr>
+
+  <h2>よくある質問・トラブルシューティング</h2>
+
+  <div class="faq-list" style="margin-top:0">
+
+    <details class="faq-item">
+      <summary>
+        動画を再生しても記録されない
+        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="faq-a">
+        <p>以下を順番にご確認ください。</p>
+        <p>① ツールバーの Watch Leap アイコンをタップし、「<strong>〇〇.com を記録する</strong>」ボタンが表示されている場合は、まだ許可されていません。ボタンをタップして「常に許可」を選択してください。<br>
+        ② ボタンが表示されず「記録中」とも表示されない場合は「設定」→「Safari」→「拡張機能」→「Watch Leap」でサイトの許可状況を確認してください。<br>
+        ③ 10秒以上再生しているか確認（デフォルトのザッピング閾値）。<br>
+        ④ YouTubeの場合、/watch ページで再生しているか確認。ホームや検索結果のプレビューは記録されません。<br>
+        ⑤ Safariを再起動して再試行。</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        ツールバーにアイコンが表示されない
+        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <p class="faq-a">「設定」→「Safari」→「拡張機能」→「Watch Leap」がオンになっているか確認してください。オンになっていない場合は有効にしてSafariを再起動してください。</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        「Safariの履歴とWebサイトデータを消去」したらデータが消えた
+        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <p class="faq-a">Watch Leap iOSアプリが同一端末にインストールされている場合、バックアップが App Group（Safariのデータ消去の対象外の領域）に自動保存されています。アプリを開くか拡張機能を再起動すると自動的に復元されます。</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        プライベートブラウズでも記録したい
+        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <p class="faq-a">「設定」→「Safari」→「拡張機能」→「Watch Leap」→「プライベートブラウズで許可」をオンにすると、プライベートタブでも記録できます。プライベートモードの履歴は通常の履歴と分離して管理されます。</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        特定のサイトを記録しないようにしたい
+        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <p class="faq-a">そのサイトでツールバーの Watch Leap アイコンをタップし、Safariの拡張機能設定からそのサイトの権限を「許可しない」に変更すると、以降そのサイトでの記録が停止します。</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        データをバックアップ・移行したい
+        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <p class="faq-a">設定画面からCSVまたはJSONファイルとしてエクスポートできます。エクスポートしたファイルはアプリからインポートして復元できます。</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        Proプランで何が変わりますか？
+        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="faq-a">
+        <p>Proプランで変わるのは以下の2点のみです。他の機能は無料でも全て利用できます。</p>
+        <p>①　視聴履歴の表示期間が全期間に解放されます（無料は直近1週間）<br>
+        ②　お気に入り登録数が無制限になります（無料は通常・プライベートそれぞれ10件）</p>
+        <p>購入はApp内のApple決済で完結します（¥480/月）。いつでもキャンセル可能です。</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        シャッフル機能について教えてください
+        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <p class="faq-a">シャッフルタブは無料で利用できます。視聴回数・経過日数・お気に入り登録などを考慮した重み付きシャッフルで、「見たいけど忘れていた動画」を優先的に提案します。全動画が必ず1周する仕組みなので、同じ動画ばかり出ることはありません。また、よく視聴する動画にはレアリティバッジ（UR・SSR・SR）が付与されます。</p>
+    </details>
+
+  </div>
+
+  <hr>
+
+  <h2>お問い合わせ</h2>
+  <p>上記で解決しない場合は、メールにてお問い合わせください。できる限り早く返信いたします。</p>
+  <a href="mailto:kobadai77@gmail.com" class="email-link">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="5" width="20" height="14" rx="2"/>
+      <path d="M2 7l10 8 10-8"/>
+    </svg>
+    kobadai77@gmail.com
+  </a>
+</div>
+
+<!-- ── English ── -->
+<div class="prose en">
+
+  <h2>Setup Guide</h2>
+  <p>Follow these steps to start using Watch Leap.</p>
+
+  <div class="support-steps">
+    <div class="s-step">
+      <div class="s-num">1</div>
+      <div>
+        <h3>Enable the Safari Extension</h3>
+        <p>Open the Settings app → Safari → Extensions → Watch Leap, and toggle it on.</p>
+      </div>
+    </div>
+
+    <div class="s-step">
+      <div class="s-num">2</div>
+      <div>
+        <h3>Allow on Video Sites (Critical)</h3>
+        <p>Open a video site (e.g. YouTube) in Safari and tap the <strong>Watch Leap icon</strong> in the toolbar. A popup appears with a "<strong>Record on youtube.com</strong>" button. Tap it — when the Safari permission dialog appears, choose "<strong>Always Allow on This Website</strong>".</p>
+        <span class="note">If no dialog appears: tap "AA" in the address bar → Watch Leap → "Always Allow on This Website" to set it manually.</span>
+      </div>
+    </div>
+
+    <div class="s-step">
+      <div class="s-num">3</div>
+      <div>
+        <h3>Play a Video</h3>
+        <p>Watch any video as you normally would. By default, videos are recorded after 10 seconds of playback.</p>
+      </div>
+    </div>
+
+    <div class="s-step">
+      <div class="s-num">4</div>
+      <div>
+        <h3>Open Your Library</h3>
+        <p>Tap the Watch Leap icon in the Safari toolbar, then tap "Open Library" to see your watch history.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 8v4M12 16h.01"/>
+    </svg>
+    <p>To allow all sites at once: Settings → Safari → Extensions → Watch Leap → scroll to the bottom and select "Allow on All Websites". No need to register each site individually.</p>
+  </div>
+
+  <hr>
+
+  <h2>Troubleshooting FAQ</h2>
+
+  <div class="faq-list" style="margin-top:0">
+
+    <details class="faq-item">
+      <summary>
+        Videos are not being recorded
+        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="faq-a">
+        <p>Please check the following in order:</p>
+        <p>① Tap the Watch Leap toolbar icon. If you see a "<strong>Record on 〇〇.com</strong>" button, that site hasn't been allowed yet — tap it and choose "Always Allow".<br>
+        ② If the button isn't shown and it doesn't say "Recording", go to Settings → Safari → Extensions → Watch Leap to review site permissions.<br>
+        ③ Make sure you watched for at least 10 seconds (the default zapping threshold).<br>
+        ④ For YouTube, make sure you're on a /watch page. Homepage or search preview playback is not recorded.<br>
+        ⑤ Try restarting Safari and playing the video again.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        The extension icon doesn't appear in Safari
+        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <p class="faq-a">Go to Settings → Safari → Extensions → Watch Leap and make sure it is toggled on. If it wasn't enabled, turn it on and restart Safari.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        I cleared Safari history and my data is gone
+        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <p class="faq-a">If the Watch Leap iOS app is installed on the same device, your data is automatically backed up to an App Group container, which is not affected by Safari history clearing. Open the app or restart the extension and your data should be restored automatically.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        I want to record videos in Private Browsing
+        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <p class="faq-a">Go to Settings → Safari → Extensions → Watch Leap → enable "Allow in Private Browsing". Private mode history is stored separately from your regular watch history.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        How do I stop recording a specific site?
+        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <p class="faq-a">Tap the Watch Leap toolbar icon on the site and change its permission to "Don't Allow" in Safari's extension settings. Recording will stop for that site going forward.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        How do I back up or transfer my data?
+        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <p class="faq-a">You can export your watch history as a CSV or JSON file from the Settings screen. The exported file can be imported back into the app to restore your data.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        What does Pro unlock?
+        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="faq-a">
+        <p>Pro changes exactly two things. Shuffle, stats, export, and all other features are free.</p>
+        <p>① Full viewing history — no 1-week display limit.<br>
+        ② Unlimited favorites — no 10-per-mode cap.</p>
+        <p>Purchase through Apple's in-app payment ($2.99/mo). Cancel anytime.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        How does the Shuffle feature work?
+        <svg class="faq-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <p class="faq-a">Shuffle is free for all users. It uses a weighted algorithm that factors in watch count, days elapsed, and favorites to surface videos you love but may have forgotten. Every video is guaranteed to appear at least once per cycle, so nothing gets buried. Frequently watched videos earn rarity badges (UR / SSR / SR) displayed on their cards.</p>
+    </details>
+
+  </div>
+
+  <hr>
+
+  <h2>Contact</h2>
+  <p>If you couldn't find a solution above, please reach out by email. We'll get back to you as soon as possible.</p>
+  <a href="mailto:kobadai77@gmail.com" class="email-link">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="5" width="20" height="14" rx="2"/>
+      <path d="M2 7l10 8 10-8"/>
+    </svg>
+    kobadai77@gmail.com
+  </a>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <div class="logo-box">
+        <svg viewBox="0 0 16 16" fill="none">
+          <rect x="1" y="2" width="14" height="10" rx="2" stroke="white" stroke-width="1.4"/>
+          <path d="M6 5.5L10.5 8L6 10.5V5.5Z" fill="white"/>
+          <path d="M4 14H12" stroke="white" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </div>
+      Watch Leap
+    </div>
+    <div class="footer-links">
+      <a href="index.html" class="ja">ホーム</a>
+      <a href="index.html" class="en">Home</a>
+      <a href="privacy.html" class="ja">プライバシーポリシー</a>
+      <a href="privacy.html" class="en">Privacy Policy</a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2025 Watch Leap. All rights reserved.</p>
+</footer>
+
+<script src="lang.js"></script>
+</body>
+</html>
